@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header div{
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center; /* Añadido para centrar el texto */
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Añadido para centrar el texto */
+}
+
+tfoot {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    text-align: center; /* Añadido para centrar el texto */
+}
+
+
+#formularioInventario {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Agregado para bordes redondeados */
+    margin-right: 10px; /* Añadido para separación entre botones */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.producto {
+    margin-bottom: 10px; /* Ajusta el valor según la separación deseada */
+}
+
+.producto button {
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+

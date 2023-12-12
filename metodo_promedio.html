@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/images/UNDC.png" type="image/png"> <!-- Agrega esta línea con la ruta de tu ícono -->
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>promedio</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Seguimiento de Inventario de Tipo Promedio</h1>
+        <div>
+            <button id="exportarDatos">Exportar Datos</button>
+            <button id="importarDatos">Importar Datos</button>
+        </div>
+    </header>
+    <form id="formularioInventario">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+    
+        <label for="tipoMovimiento">Tipo:</label>
+        <select id="tipoMovimiento" name="tipoMovimiento" required>
+            <option value="">Seleccione una opción</option>
+            <option value="compra">Compra</option>
+            <option value="venta">Venta</option>
+        </select>
+
+        <div id="entradasProductos">
+            <div class="producto">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="cantidad" name="cantidad[]" min="1" required>
+                <label for="precioUnitario">Precio Unitario:</label>
+                <input type="number" class="precioUnitario" name="precioUnitario[]" step="0.01" required>
+                <button type="button" class="eliminarProducto">Eliminar Producto</button>
+            </div>
+            
+        </div>
+
+        <button type="button" id="agregarProducto">Agregar Producto</button>
+        <button type="submit">Agregar Movimiento</button>
+    </form>
+    
+
+
+    <table id="tablaInventario">
+        <thead>
+            <tr>
+                <th>FECHA</th>
+                <th colspan="3">COMPRAS</th>
+                <th colspan="3">VENTAS</th>
+                <th colspan="3">SALDOS</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Cantidad</th>
+                <th>Costo Uni</th>
+                <th>Costo Total</th>
+                <th>Cantidad</th>
+                <th>Costo Uni</th>
+                <th>Costo Total</th>
+                <th>Cantidad</th>
+                <th>Costo Uni</th>
+                <th>Costo Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas se agregarán dinámicamente aquí -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Compras:</td>
+                <td id="totalCompras">0</td>
+                <!-- Más celdas si son necesarias -->
+            </tr>
+            <tr>
+                <td colspan="6">Costo de venta:</td>
+                <td id="costoVentaTotal">0</td>
+            </tr>
+            <tr>
+                <td colspan="7">Saldo:</td>
+                <td id="totalSaldo">0</td>
+                <!-- Más celdas si son necesarias -->
+            </tr>
+        </tfoot>
+        
+    </table>
+        <!-- <button class="Actualizar">Actualizar Inventario</button> -->
+
+
+      
+</body>
+<script src="./Assets/js/main.js"></script>
+</html>
